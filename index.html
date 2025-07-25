@@ -9,11 +9,21 @@
 <body>
   <header>
     <nav>
-      <h1>Your Firm Name</h1>
+      <h1>WAU ACCOUNTANTS | BUSINESS CONSULTANTS </h1>
+      <div class="hamburger" aria-label="Open navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our_team.html">Our Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quary.html">FAQ</a></li>
       </ul>
     </nav>
   </header>
@@ -21,7 +31,7 @@
   <section class="hero">
     <h2>Welcome to Your Firm</h2>
     <p>Professional services with a PNG heart.</p>
-    <button>About Us</button>
+    <button onclick="location.href='about.html'">About Us</button>
   </section>
 
   <section id="about">
@@ -32,15 +42,47 @@
   <section id="contact">
     <h2>Contact</h2>
     <form>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea placeholder="Your Message"></textarea>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
+  <div id="visitor-counter" style="margin-top:1rem; font-size:0.95rem; color:#ffb300;"></div>
+
   <footer>
-    <p>© 2025 Your Firm. Made with ❤️ in PNG.</p>
+    <div class="footer-flex">
+      <div>
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="https://facebook.com/yourfirm" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/yourfirm" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://linkedin.com/company/yourfirm" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://instagram.com/yourfirm" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul>
+          <li>Consulting</li>
+          <li>Design & Branding</li>
+          <li>Strategy Planning</li>
+          <li>Support & Training</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <address>
+          Your Firm Name<br>
+          123 Main Street<br>
+          Port Moresby, PNG<br>
+          <a href="mailto:info@yourfirm.com">info@yourfirm.com</a><br>
+          +675 1234 5678
+        </address>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Your Firm. Made with ❤️ in PNG.</p>
   </footer>
 
   <script src="script.js"></script>
