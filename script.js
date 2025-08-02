@@ -58,4 +58,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 counterDiv.textContent = 'Visitor count unavailable.';
             });
     }
+
+    // Smooth cross-fade hero slideshow
+    document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.hero');
+        if (!hero) return;
+        const images = [
+            'images/image (1).jpg',
+            'images/image (2).jpg',
+            'images/image (3).jpg',
+            'images/image (4).jpg'
+        ];
+        let idx = 0;
+
+        // Create two background layers for cross-fade
+        const bg1 = document.createElement('div');
+        const bg2 = document.createElement('div');
+        bg1.className = bg2.className = 'hero-bg';
+        bg1.style.backgroundImage = `url('${images[0]}')`;
+        bg2.style.opacity = 0;
+        hero.appendChild(bg1);
+        hero.appendChild(bg2);
+
+        setInterval(() => {
+            const nextIdx = (idx + 1) % images.length;
+            bg2.style.backgroundImage = `url('${images[nextIdx]}')`;
+            bg2.style.opacity = 1;
+            setTimeout(() => {
+                bg1.style.backgroundImage = `url('${images[nextIdx]}')`;
+                bg2.style.opacity = 0;
+                idx = nextIdx;
+            }, 1200); // Match transition duration
+        }, 5000);
+    });
 });

@@ -9,6 +9,18 @@ body {
   background: #f8f9fa;
   color: #222;
   line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('images/image (6).jpg') center center/cover no-repeat;
+  filter: blur(10px) brightness(0.85);
+  opacity: 0.7;
+  pointer-events: none;
 }
 header {
   background: #2f2f33;
@@ -31,7 +43,7 @@ nav h1 {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 0.5rem;
 }
 .nav-links li a {
   color: #fff;
@@ -59,10 +71,40 @@ nav h1 {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(90deg, #39ab56 60%, #b6c05c 100%);
+  position: relative;
   color: #fff;
   padding: 3rem 1rem;
   text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: hero-slideshow 15s infinite linear;
+  opacity: 0.85;
+}
+@keyframes hero-slideshow {
+  0% {
+    background-image: url('images/image\ \(1\).jpg');
+  }
+  33% {
+    background-image: url('images/image\ \(2\).jpg');
+  }
+  66% {
+    background-image: url('images/image\ \(3\).jpg');
+  }
+  100% {
+    background-image: url('images/image\ \(4\).jpg');
+  }
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 .hero h2 {
   font-size: 2.5rem;
