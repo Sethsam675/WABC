@@ -91,4 +91,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1200); // Match transition duration
         }, 5000);
     });
+
+    // Splash screen logic
+    window.addEventListener('DOMContentLoaded', function() {
+        const splash = document.getElementById('splash-screen');
+        if (splash) {
+            setTimeout(() => {
+                splash.classList.add('hide');
+                setTimeout(() => splash.style.display = 'none', 700);
+            }, 1500); // Show splash for 1.5 second
+        }
+    });
+
+    // Page transition effect for all pages except index.html
+    if (!/index\.html$|\/$/.test(window.location.pathname)) {
+        document.body.classList.add('page-transition');
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.body.classList.add('page-loaded');
+                document.body.classList.remove('page-transition');
+            }, 100); // Delay for smooth effect
+        });
+    }
 });
