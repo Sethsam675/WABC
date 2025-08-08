@@ -23,9 +23,13 @@ body::before {
   pointer-events: none;
 }
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: #2f2f33;
   color: #fff;
   padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(30,30,60,0.08);
 }
 nav {
   display: flex;
@@ -323,6 +327,11 @@ body.page-loaded {
   }
   .hero h2 {
     font-size: 1.5rem;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 101;
   }
 }
 @media (max-width: 600px) {
