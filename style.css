@@ -186,6 +186,7 @@ form button:hover {
 /* Footer */
 footer {
   text-align: center;
+  font-size: 0.9rem;
   padding: 1.5rem 0;
   background: #2f2f33;
   color: #fff;
@@ -220,6 +221,7 @@ footer a {
 footer h4 {
   margin-bottom: 0.7rem;
   color: #ffb300;
+  font-size: 1rem;
 }
 
 /* Splash Screen Styles */
@@ -344,4 +346,13 @@ body.page-loaded {
   footer p {
     font-size: 0.95rem;
   }
+}
+/* For team photo */
+.team-photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
